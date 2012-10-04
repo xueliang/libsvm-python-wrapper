@@ -73,7 +73,7 @@ class svmRBF():
             last_line = line
             line = f.readline()
             if not line: break
-        accu = re.findall('Accuracy = (100$|[0-9]{1,2}$|[0-9]{1,2}\.[0-9]+)%.*',last_line)[0]
+        accu = re.findall('Accuracy = (100|[0-9]{1,2}|[0-9]{1,2}\.[0-9]+)%.*',last_line)[0]
         return float(accu)
 
 if __name__ == '__main__':
